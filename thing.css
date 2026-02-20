@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+.support-page {
+    background-color: #f9f9f9;
+    margin: 0;
+    font-family: nunito;
+}
+
+.support-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+
+.support-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr 320px;
+    gap: 25px;
+    align-items: start;
+}
+
+.glass-card {
+    background: #e0e0e0; 
+    border-radius: 35px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.section-label { font-size: 0.9rem; opacity: 0.7; margin-bottom: 15px; }
+
+
+#goalInput, #moodInput {
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    padding: 15px;
+    background: white;
+    resize: none;
+    box-sizing: border-box;
+}
+
+#goalInput { height: 160px; margin-bottom: 15px; }
+#moodInput { border-radius: 12px; }
+
+.field-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.primary-btn {
+    background: #4a90e2; color: white;
+    border: none; border-radius: 12px;
+    padding: 12px 25px; font-weight: 700;
+    cursor: pointer; width: 100%;
+    transition: background 0.3s;
+}
+
+.primary-btn:hover { background: #357abd; }
+
+
+.content-center {
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-hero { text-align: center; }
+.circular-chart { max-width: 200px; margin: 0 auto 20px; }
+.circle-bg { fill: none; stroke: #d1d1d1; stroke-width: 2.5; }
+.circle {
+    fill: none; stroke: #4a90e2; stroke-width: 2.5;
+    stroke-linecap: round; transition: stroke-dasharray 0.5s ease;
+}
+.percentage { font-size: 0.5rem; text-anchor: middle; font-weight: 800; fill: #333; }
+.percentage-label { font-size: 0.2rem; text-anchor: middle; fill: #666; }
+
+
+.table-container { 
+    background: white; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    margin-top: 15px;
+    width: 100%; 
+}
+
+table { width: 100%; border-collapse: collapse; }
+th { background: #f0f0f0; padding: 12px; text-align: left; font-size: 0.8rem; }
+td { padding: 12px; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+
+.input-sidebar, .mood-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+
+[data-theme="dark"].support-page { background-color: #121212; color: #ffffff; }
+[data-theme="dark"] .glass-card { background: #2a2a2a; color: #ffffff; }
+[data-theme="dark"] #goalInput, [data-theme="dark"] #moodInput { 
+    background: #333333; color: #ffffff; border: 1px solid #444; 
+}
+[data-theme="dark"] .table-container, [data-theme="dark"] table th { background: #1e1e1e; color: #ffffff; }
+[data-theme="dark"] td { border-bottom: 1px solid #333; color: #dddddd; }
+[data-theme="dark"] .percentage { fill: #ffffff; }
+
+
+@media (max-width: 1100px) {
+    .support-layout {
+        grid-template-columns: 300px 1fr; 
+    }
+    .mood-sidebar { grid-column: span 2; }
+}
+
+@media (max-width: 800px) {
+    .support-layout {
+        grid-template-columns: 1fr;
+    }
+    .mood-sidebar, .input-sidebar { grid-column: auto; }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destressor | Declutter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-section">
+        <div class="menu-container">
+            <span id="menu-icon" onclick="toggleMenu()">☰</span>
+            <div id="dropdown-menu" class="dropdown-content">
+                <a href="index.html">Dashboard</a>
+                <a href="support_and_the_goals.html">Set Goals and Get Support</a>
+            </div>
+        </div>
+        <h1>Destressor</h1>
+    </div>
+    <div class="header-icons">
+        <div class="dark-mode-btn" onclick="toggleDark()">
+            <div class="toggle-circle"></div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="main-layout">
+        
+        <div class="left-content">
+            <div class="widget-card vertical-panel">
+                <div class="text-content">
+                    <p style="margin-bottom: 10px; font-weight: bold;">Thought Dump</p>
+                    <p>Type out what you need to get done and this will help sort it out for you </p>
+                </div>
+                <textarea id="thought-input" placeholder="What are you stressed about?"></textarea>
+                <button class="start-btn" id="sort-btn" onclick="processThoughts()">Sort Thoughts</button>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="widget-card vertical-panel">
+                <h3 class="blue-text">Priority Buckets</h3>
+                
+                <div class="bucket" id="high-bucket">
+                    <small style="color: #ff4d4d;">Priority High</small>
+                    </div>
+
+                <div class="bucket" id="medium-bucket">
+                    <small style="color: #ffa500;">Priority Medium</small>
+                </div>
+
+                <div class="bucket" id="low-bucket">
+                    <small style="color: #4a90e2;">Priority Low</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/The_Darkside.js"></script>
+<script src="js/Priotity_things.js"></script>
+</body>
+</html>

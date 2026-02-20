@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destressor | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-section">
+        <div class="menu-container">
+            <span id="menu-icon" onclick="toggleMenu()">☰</span>
+            <div id="dropdown-menu" class="dropdown-content">
+                <a href="Priority_Tast_idk.html">Prioritise your tasks</a>
+                <a href="support_and_the_goals.html">Set Goals and Get Support</a>
+            </div>
+        </div>
+        <h1>Destressor</h1>
+    </div>
+    <div class="header-icons">
+        <div class="dark-mode-btn" onclick="toggleDark()">
+            <div class="toggle-circle"></div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="main-layout">
+        
+        <div class="left-content">
+            <div class="widget-card">
+                <div class="circle-ui" id="breathe-circle">
+                    <span id="breathe-text">Inhale</span>
+                </div>
+                <div class="text-content">
+                    <p>Welcome Back. Practice the box breathing exercise to the left to get into a calm and stress-free state before beginning a productive session.</p>
+                </div>
+            </div>
+
+            <div class="widget-card">
+                <div class="timer-controls-group">
+                    <div class="circle-ui" id="timer-circle">
+                        <span id="timer-display">00:25:00</span>
+                    </div>
+                    <button class="start-btn" id="timer-btn" onclick="toggleTimer()">Start</button>
+                </div>
+                <div class="text-content">
+                    <p>This is a Focus Timer: Set the timer to ensure you "Lock in" and meet your goals.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="widget-card vertical-panel">
+                
+                <div class="panel-section tight-stack">
+                    <h3 class="blue-text">Get Inspired</h3>
+                    <p id="quote">Your quote will appear here...</p>
+                    <button class="start-btn regen-btn" id="regen-btn" onclick="showRandomQuote()">Regenerate ↻</button>
+                </div>
+                
+                <hr class="panel-divider">
+
+                <div class="panel-section tight-stack">
+                    <h3 class="blue-text">What is this?</h3>
+                    <p>This is Destressor, a tool designed to help you manage academic stress and stay on top of your tasks without becoming overwhelmed. In this site you can prioritise tasks so that you know what to do first, you will be able to set smart goals have a weekly planner and have a mood checkin</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/The_Darkside.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

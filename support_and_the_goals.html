@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destressor | Support & Goals</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="thing.css">
+</head>
+<body class="support-page">
+
+<header>
+    <div class="logo-section">
+        <div class="menu-container">
+            <span id="menu-icon" onclick="toggleMenu()">☰</span>
+            <div id="dropdown-menu" class="dropdown-content">
+                <a href="index.html">Dashboard</a>
+                <a href="Priority_Tast_idk.html">Prioritise your tasks</a>
+            </div>
+        </div>
+        <h1>Destressor</h1>
+    </div>
+    <div class="header-icons">
+        <div class="dark-mode-btn" onclick="toggleDark()">
+            <div class="toggle-circle"></div>
+        </div>
+    </div>
+</header>
+
+<div class="support-container">
+    <div class="support-layout">
+        
+        <aside class="input-sidebar">
+            <div class="glass-card">
+                <p class="section-label">How can we help you?</p>
+                <textarea id="goalInput" placeholder="Enter your SMART goal here...."></textarea>
+                
+                <div class="field-row">
+                    <span>Due date:</span>
+                    <input type="date" id="goalDate">
+                </div>
+                
+                <div class="field-row">
+                    <span>Status:</span>
+                    <select id="goalStatus">
+                        <option value="To Do">To Do</option>
+                        <option value="In Progress" selected>In Progress</option>
+                        <option value="Done">Done</option>
+                    </select>
+                </div>
+                
+                <button class="primary-btn" onclick="addGoal()">Add Goal</button>
+            </div>
+        </aside>
+
+        <main class="content-center">
+            <div class="glass-card progress-hero">
+                <div class="progress-widget">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path id="progressPath" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="18" y="20.35" class="percentage" id="progressText">0%</text>
+                        <text x="18" y="26" class="percentage-label">Task Progress</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="glass-card log-section">
+                <h3 class="accent-title">Weekly Planner for you to achieve your SMART Goals</h3>
+                <div class="table-container">
+                    <table id="goalsTable">
+                        <thead>
+                            <tr>
+                                <th>Goal:</th>
+                                <th>Deadline:</th>
+                                <th>Status:</th>
+                                <th>Action:</th>
+                            </tr>
+                        </thead>
+                        <tbody id="goalList">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <aside class="mood-sidebar">
+            <div class="glass-card">
+                <p class="section-label">Mood Check-in</p>
+                <textarea id="moodInput" placeholder="How are you feeling right now?" rows="4"></textarea>
+                <div class="field-row" style="margin-top:10px; gap:10px;">
+                    <button class="primary-btn" id="saveMoodBtn">Save Mood</button>
+                </div>
+                <div style="margin-top:12px;">
+                    <p class="small-label">Last entry:</p>
+                    <div id="lastMood" style="background: rgba(0,0,0,0.03); padding:10px; border-radius:8px; min-height:40px;">
+                        <em>No mood saved yet.</em>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+</div>
+
+<script src="js/goals_support_thing.js"></script>
+<script src="js/The_Darkside.js"></script>
+</body>
+</html>
