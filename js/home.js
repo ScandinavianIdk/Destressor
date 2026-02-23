@@ -2,11 +2,11 @@
 const breatheCircle = document.getElementById('breathe-circle');
 const breatheText = document.getElementById('breathe-text');
 
-let stage = 0; // 0: Inhale, 1: Hold, 2: Exhale, 3: Hold
+let stage = 0; // 0: Inhale, 1: Hold, 2: Exhale, 3: Hold 👍
 
 function runBreathing() {
     setInterval(() => {
-        // Step 1: Update the visuals and text based on the stage
+        
         if (stage === 0) {
             breatheText.innerText = "Inhale";
             breatheCircle.style.transition = "transform 4s ease-in-out";
@@ -14,7 +14,7 @@ function runBreathing() {
         } 
         else if (stage === 1) {
             breatheText.innerText = "Hold";
-            // No scale change, it just stays big
+            
         } 
         else if (stage === 2) {
             breatheText.innerText = "Exhale";
@@ -23,7 +23,7 @@ function runBreathing() {
         } 
         else if (stage === 3) {
             breatheText.innerText = "Hold";
-            // No scale change, it just stays small
+            
         }
 
         // Step 2: Move to the next stage (0, 1, 2, 3, then back to 0)
@@ -102,4 +102,5 @@ window.onload = () => {
     loadQuotes();
     
     
+
 };
