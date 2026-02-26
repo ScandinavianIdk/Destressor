@@ -19,18 +19,13 @@ function toggleMenu() {
     document.getElementById("dropdown-menu").classList.toggle("show");
 }
 
-window.onclick = function(event) {
-    if (!event.target.matches('#menu-icon')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
+window.addEventListener("click", function(event) {
+    const menuIcon = document.getElementById("menu-icon");
+    const dropdown = document.getElementById("dropdown-menu");
 
+    if (!menuIcon.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.classList.remove("show");
+    }
+});
 
 //I had to add the bit above so that the dropdown menu worked on all pages and not just on the home page
-
