@@ -15,6 +15,9 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+function toggleMenu() {
+    document.getElementById("dropdown-menu").classList.toggle("show");
+}
 
 window.onclick = function(event) {
     if (!event.target.matches('#menu-icon')) {
@@ -30,3 +33,4 @@ window.onclick = function(event) {
 
 
 //I had to add the bit above so that the dropdown menu worked on all pages and not just on the home page
+
